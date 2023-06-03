@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/card_background">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Bank"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/montserrat_bold"
+                    android:textStyle="bold"/>
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/margin_normal"-->
+<!--                    android:layout_marginStart="@dimen/margin_small"-->
+<!--                    android:layout_marginEnd="@dimen/margin_small"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    android:layout_marginBottom="@dimen/margin_small">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/bank_bg"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/linearLayout3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/margin_small"-->
+<!--                            android:layout_marginTop="@dimen/margin_small"-->
+<!--                            android:layout_marginEnd="@dimen/margin_small">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvBankName"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginEnd="@dimen/margin_small"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:ellipsize="end"-->
+<!--                                android:maxLines="1"-->
+<!--                                android:text="SBI Bank"-->
+<!--                                android:textSize="@dimen/_14ssp"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="IMPS"-->
+<!--                                android:textSize="@dimen/_14ssp"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvUpiId"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="end"-->
+<!--                            android:layout_marginEnd="@dimen/margin_small"-->
+<!--                            android:textSize="@dimen/_12ssp"-->
+<!--                            android:text="090@sbi"-->
+<!--                            app:fontFamily="@font/montserrat_bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvAccountHolderName"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/margin_small"-->
+<!--                            android:layout_marginEnd="@dimen/margin_small"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:text="Marvellous User"-->
+<!--                            android:textSize="@dimen/_14ssp"-->
+<!--                            android:textColor="@color/blue"-->
+<!--                            app:fontFamily="@font/montserrat_bold" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/linearLayout4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/margin_small"-->
+<!--                            android:layout_marginTop="@dimen/margin_normal"-->
+<!--                            android:layout_marginEnd="@dimen/margin_small">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTitleAccountNo"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Ac. No"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="@dimen/_14ssp"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvAccountNumber"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginStart="@dimen/margin_small"-->
+<!--                                android:text="000000000"-->
+<!--                                android:textSize="@dimen/_12ssp"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/linearLayout5"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/margin_small"-->
+<!--                            android:layout_marginTop="@dimen/margin_tiny"-->
+<!--                            android:layout_marginEnd="@dimen/margin_small"-->
+<!--                            android:layout_marginBottom="@dimen/margin_small">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvTitleIfsc"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="IFSC"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:textSize="@dimen/_12ssp"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/tvIfsc"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginStart="@dimen/margin_normal"-->
+<!--                                android:text="SBI905038"-->
+<!--                                android:textSize="@dimen/_12ssp"-->
+<!--                                app:fontFamily="@font/montserrat_bold" />-->
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name On Account"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/etAccountNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Account No."
+                    android:inputType="number"
+                    android:textSize="@dimen/_12ssp"
+                    android:padding="@dimen/_12sdp"
+                    app:fontFamily="@font/montserrat_medium"/>
+
+                <EditText
+                    android:id="@+id/etIFSC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="IFSC Code"
+                    android:textSize="@dimen/_12ssp"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/_12sdp"
+                    app:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/etBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Bank Name"
+                    android:textSize="@dimen/_12ssp"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/_12sdp"
+                    app:fontFamily="@font/montserrat_medium" />
+
+                <EditText
+                    android:id="@+id/etUPI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="UPI (Optional)"
+                    android:inputType="text"
+                    android:textSize="@dimen/_12ssp"
+                    android:padding="@dimen/_12sdp"
+                    app:fontFamily="@font/montserrat_medium" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            style="@style/AppTheme.RoundedButton.Small"
+            android:paddingStart="@dimen/padding_large"
+            android:paddingEnd="@dimen/padding_large"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_18ssp"
+            app:fontFamily="@font/montserrat_bold" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:orientation="vertical">
+
+        <!--        <FrameLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="190dp"-->
+        <!--            android:background="@color/color_separator_light">-->
+
+        <!--            <com.airbnb.lottie.LottieAnimationView-->
+        <!--                android:layout_width="150dp"-->
+        <!--                android:layout_height="160dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                app:lottie_autoPlay="true"-->
+        <!--                app:lottie_loop="true"-->
+        <!--                app:lottie_rawRes="@raw/lottie_warning" />-->
+
+        <!--        </FrameLayout>-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvOutletName"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            android:layout_marginTop="32dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textSize="18sp"-->
+        <!--            android:text="Oh Snap!"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:fontFamily="@font/nunito_bold"
+            android:text="The following methods are recommended for seamless payments."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/google"
+                app:fontFamily="@font/nunito_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:text="Google Pay"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/amazon"
+                android:layout_marginStart="@dimen/margin_tiny"
+                android:layout_marginEnd="@dimen/margin_tiny"
+                android:textSize="@dimen/_8ssp"
+                app:fontFamily="@font/nunito_bold"
+                android:textColor="@color/black"
+                android:text="Amazon Pay"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@drawable/paytm"
+                app:fontFamily="@font/nunito_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                android:text="Paytm"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="24dp"
+            app:fontFamily="@font/nunito_bold"
+            android:text="Take a Screenshot and Contact Help &amp; Support in case you face any issue."/>
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:text="Done"
+            app:cornerRadius="8dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

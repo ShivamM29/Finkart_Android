@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_tiny">@dimen/_4sdp</dimen>
+    <dimen name="margin_small">@dimen/_8sdp</dimen>
+    <dimen name="margin_normal">@dimen/_16sdp</dimen>
+    <dimen name="margin_medium">@dimen/_24sdp</dimen>
+    <dimen name="margin_large">@dimen/_36sdp</dimen>
+
+    <dimen name="padding_tiny">@dimen/_4sdp</dimen>
+    <dimen name="padding_small">@dimen/_8sdp</dimen>
+    <dimen name="padding_normal">@dimen/_16sdp</dimen>
+    <dimen name="padding_medium">@dimen/_24sdp</dimen>
+    <dimen name="padding_large">@dimen/_36sdp</dimen>
+
+    <dimen name="corner_radius_small">@dimen/_10sdp</dimen>
+    <dimen name="corner_radius_medium">@dimen/_16sdp</dimen>
+    <dimen name="corner_radius_large">@dimen/_24sdp</dimen>
+
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+
+    <dimen name="min_height_line_chart">300dp</dimen>
+</resources>

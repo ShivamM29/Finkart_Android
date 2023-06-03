@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_2"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.finkart.views.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_investmentFragment"
+            app:destination="@id/investmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.finkart.views.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_nomineeDetailsFragment"
+            app:destination="@id/nomineeDetailsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_kycDetailsFragment"
+            app:destination="@id/kycDetailsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_bankDetailsFragment"
+            app:destination="@id/bankDetailsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_myInvestmentFragment"
+            app:destination="@id/myInvestmentFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.finkart.views.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/investmentFragment"
+        android:name="com.finkart.views.InvestmentFragment"
+        android:label="fragment_investment"
+        tools:layout="@layout/fragment_investment" />
+    <fragment
+        android:id="@+id/bankDetailsFragment"
+        android:name="com.finkart.views.BankDetailsFragment"
+        android:label="fragment_bank_details"
+        tools:layout="@layout/fragment_bank_details" />
+    <fragment
+        android:id="@+id/kycDetailsFragment"
+        android:name="com.finkart.views.KycDetailsFragment"
+        android:label="fragment_kyc_details"
+        tools:layout="@layout/fragment_kyc_details" />
+    <fragment
+        android:id="@+id/myInvestmentFragment"
+        android:name="com.finkart.views.MyInvestmentFragment"
+        android:label="fragment_my_investment"
+        tools:layout="@layout/fragment_my_investment" />
+    <fragment
+        android:id="@+id/nomineeDetailsFragment"
+        android:name="com.finkart.views.NomineeDetailsFragment"
+        android:label="fragment_nominee_details"
+        tools:layout="@layout/fragment_nominee_details" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.finkart.views.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+</navigation>

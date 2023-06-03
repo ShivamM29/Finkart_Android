@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/card_background">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:src="@drawable/successful"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="Payment Successful"
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvTitleRatio"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/margin_normal"-->
+<!--            android:layout_marginTop="@dimen/margin_large"-->
+<!--            android:text="Partnership Ratio: "-->
+<!--            android:textSize="@dimen/_12ssp"-->
+<!--            android:visibility="invisible"-->
+<!--            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"-->
+<!--            android:textColor="@color/blue"-->
+<!--            app:fontFamily="@font/nunito_bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView9" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvPrRatio"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/margin_normal"-->
+<!--            android:text="100%"-->
+<!--            android:textColor="@color/dark_gray"-->
+<!--            android:visibility="invisible"-->
+<!--            android:textSize="@dimen/_12ssp"-->
+<!--            app:fontFamily="@font/nunito_bold"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tvTitleRatio"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tvTitleRatio" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvTitleRigs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/margin_normal"-->
+<!--            android:text="No of Rigs: "-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_marginTop="@dimen/margin_small"-->
+<!--            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"-->
+<!--            android:textColor="@color/blue"-->
+<!--            android:textSize="@dimen/_12ssp"-->
+<!--            app:fontFamily="@font/nunito_bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tvTitleRatio" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvNoOfRigs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/margin_normal"-->
+<!--            android:text="01"-->
+<!--            android:visibility="invisible"-->
+<!--            android:textColor="@color/dark_gray"-->
+<!--            android:textSize="@dimen/_12ssp"-->
+<!--            app:fontFamily="@font/nunito_bold"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/tvTitleRigs"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/tvTitleRigs" />-->
+
+        <TextView
+            android:id="@+id/tvYepee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="Yipeee!"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvYepee" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMessage"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Total Amount"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="2,40,000"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintEnd_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Payment Mode"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/tvPaymentMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="IMPS"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintEnd_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="Payment Date"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/tvPaymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="14/12/2022"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_12ssp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintEnd_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/button_main_background"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14ssp"
+            app:fontFamily="@font/nunito_bold"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvPaymentDate"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434274078606",
+    "project_id": "finkart-7cb3d",
+    "storage_bucket": "finkart-7cb3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434274078606:android:6458d1376a87970b201edf",
+        "android_client_info": {
+          "package_name": "com.finkart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434274078606-frlmlbkb8vhm1mibae4jgmqb4bl9l1f1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt7TPjxmOMAZYrd3nqwkf7DGedwSpGWUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434274078606-frlmlbkb8vhm1mibae4jgmqb4bl9l1f1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
