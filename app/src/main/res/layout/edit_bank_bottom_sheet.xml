@@ -246,7 +246,7 @@
             android:paddingEnd="@dimen/padding_large"
             android:text="Update"
             android:textAllCaps="false"
-            android:textSize="@dimen/_18ssp"
+            android:textSize="@dimen/_14ssp"
             app:fontFamily="@font/montserrat_bold" />
     </LinearLayout>
 </FrameLayout>

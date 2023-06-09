@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            app:fontFamily="@font/nunito_bold"
+            app:fontFamily="@font/montserrat_medium"
             android:text="The following methods are recommended for seamless payments."/>
 
         <LinearLayout
@@ -58,7 +58,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:drawableTop="@drawable/google"
-                app:fontFamily="@font/nunito_bold"
+                app:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_8ssp"
                 android:text="Google Pay"/>
@@ -72,7 +72,7 @@
                 android:layout_marginStart="@dimen/margin_tiny"
                 android:layout_marginEnd="@dimen/margin_tiny"
                 android:textSize="@dimen/_8ssp"
-                app:fontFamily="@font/nunito_bold"
+                app:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/black"
                 android:text="Amazon Pay"/>
 
@@ -82,7 +82,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:drawableTop="@drawable/paytm"
-                app:fontFamily="@font/nunito_bold"
+                app:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_8ssp"
                 android:text="Paytm"/>
@@ -94,7 +94,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="@dimen/margin_small"
             android:layout_marginBottom="24dp"
-            app:fontFamily="@font/nunito_bold"
+            app:fontFamily="@font/montserrat_medium"
             android:text="Take a Screenshot and Contact Help &amp; Support in case you face any issue."/>
 
         <Button

@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accounts"
+            android:text="Account"
             android:textSize="@dimen/_18ssp"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/dark_blue" />
@@ -31,6 +31,7 @@
             android:id="@+id/ivProfile"
             android:layout_width="@dimen/_36sdp"
             android:layout_height="@dimen/_36sdp"
+            android:scaleType="centerCrop"
             android:theme="@style/circularImage"
             app:strokeWidth="1dp"
             android:padding="@dimen/_1sdp"
@@ -68,11 +69,14 @@
                         android:id="@+id/tvWallet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="My Wallet"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -88,11 +92,14 @@
                         android:id="@+id/tvMyInvestment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="My Investment"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -108,31 +115,14 @@
                         android:id="@+id/tvEkyc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="EKYC Details"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="2dp"
-                    android:layout_marginStart="@dimen/margin_normal"
-                    android:layout_marginEnd="@dimen/margin_normal">
-
-                    <TextView
-                        android:id="@+id/tvNominee"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
-                        android:text="Nominee Details"
-                        android:drawableEnd="@drawable/round_arrow_forward_ios_24"
-                        android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -148,11 +138,14 @@
                         android:id="@+id/tvManageBank"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Manage Banks"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -168,11 +161,14 @@
                         android:id="@+id/tvHelpAndSupport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Help &amp; Support"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -188,11 +184,14 @@
                         android:id="@+id/tvTermsConditions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Terms &amp; Conditions"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -208,11 +207,14 @@
                         android:id="@+id/tvPrivacyPolicy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Privacy Policy"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -228,11 +230,14 @@
                         android:id="@+id/tvRateUs"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Rate Us"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -249,11 +254,14 @@
                         android:id="@+id/tvLogOut"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_small"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_small"
                         android:text="Log Out"
                         android:drawableEnd="@drawable/round_arrow_forward_ios_24"
                         android:background="?attr/selectableItemBackground"
-                        android:textSize="@dimen/_16ssp"/>
+                        android:textSize="@dimen/_14ssp"/>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </ScrollView>

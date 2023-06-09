@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.finkart'
+    namespace 'com.investment.finkart'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.finkart"
+        applicationId "com.investment.finkart"
         minSdk 33
         targetSdk 33
         versionCode 1

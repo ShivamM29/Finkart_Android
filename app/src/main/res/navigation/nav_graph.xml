@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.finkart.WelcomeFragment"
+        android:name="com.investment.finkart.views.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.finkart.views.LoginFragment"
+        android:name="com.investment.finkart.views.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoardFragment"
-        android:name="com.finkart.views.OnBoardFragment"
+        android:name="com.investment.finkart.views.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" />
 </navigation>

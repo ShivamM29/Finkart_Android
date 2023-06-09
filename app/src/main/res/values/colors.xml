@@ -18,4 +18,5 @@
     <color name="green">#07A473 </color>
     <color name="shimmer_gray">#CCCCCC</color>
     <color name="orange">#FFAA08</color>
+    <color name="batch_background">#DDDDDD</color>
 </resources>

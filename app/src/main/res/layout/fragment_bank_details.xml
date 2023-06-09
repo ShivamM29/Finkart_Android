@@ -15,6 +15,7 @@
         android:layout_margin="@dimen/margin_normal">
 
         <ImageButton
+            android:id="@+id/ibBack"
             android:layout_width="@dimen/_36sdp"
             android:layout_height="@dimen/_36sdp"
             android:src="@drawable/back_arrow"
@@ -40,7 +41,7 @@
             android:id="@+id/scrollAdd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible">
+            android:visibility="gone">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +68,6 @@
                     android:background="@drawable/edit_text_background"
                     android:textSize="@dimen/_12ssp"
                     android:hint="Account Holder Name"
-                    android:focusable="false"
                     android:inputType="textCapWords"
                     android:padding="@dimen/_12sdp" />
 
@@ -107,7 +107,6 @@
                     android:background="@drawable/edit_text_background"
                     android:textSize="@dimen/_12ssp"
                     android:hint="Bank Name"
-                    android:focusable="false"
                     android:inputType="text"
                     android:padding="@dimen/_12sdp" />
 
@@ -121,7 +120,6 @@
                     android:background="@drawable/edit_text_background"
                     android:textSize="@dimen/_12ssp"
                     android:hint="UPI (Optional)"
-                    android:focusable="false"
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/_12sdp" />
 

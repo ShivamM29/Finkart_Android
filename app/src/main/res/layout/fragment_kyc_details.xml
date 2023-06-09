@@ -15,6 +15,7 @@
         android:layout_margin="@dimen/margin_normal">
 
         <ImageButton
+            android:id="@+id/ibBack"
             android:layout_width="@dimen/_36sdp"
             android:layout_height="@dimen/_36sdp"
             android:src="@drawable/back_arrow"
@@ -127,8 +128,8 @@
                         android:background="@drawable/edit_text_background"
                         android:textSize="@dimen/_12ssp"
                         android:hint="What You Do"
-                        android:focusable="false"
                         android:inputType="text"
+                        android:focusable="false"
                         android:padding="@dimen/_12sdp" />
 
                     <Button
@@ -176,7 +177,6 @@
                         android:background="@drawable/edit_text_background"
                         android:textSize="@dimen/_12ssp"
                         android:hint="Nominee Name"
-                        android:focusable="false"
                         android:inputType="textCapWords"
                         android:padding="@dimen/_12sdp" />
 
@@ -202,7 +202,6 @@
                         android:background="@drawable/edit_text_background"
                         android:textSize="@dimen/_12ssp"
                         android:hint="Aadhaar Number"
-                        android:focusable="false"
                         android:inputType="number"
                         android:maxLength="12"
                         android:padding="@dimen/_12sdp" />
@@ -293,7 +292,7 @@
                             android:layout_marginStart="@dimen/margin_small"
                             android:background="@drawable/batch_item_background">
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/ivSelfie"
                                 android:scaleType="centerCrop"
                                 android:theme="@style/roundedImage"
@@ -396,7 +395,7 @@
                             android:layout_marginStart="@dimen/margin_small"
                             android:background="@drawable/batch_item_background">
 
-                            <ImageView
+                            <com.google.android.material.imageview.ShapeableImageView
                                 android:id="@+id/ivAadharBack"
                                 android:scaleType="centerCrop"
                                 android:theme="@style/roundedImage"

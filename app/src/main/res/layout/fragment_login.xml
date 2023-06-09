@@ -15,7 +15,8 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/finkart_icon"/>
 
         <TextView
             android:id="@+id/heading_1"
@@ -23,6 +24,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/_24ssp"
             android:layout_marginTop="@dimen/margin_large"
+            android:textColor="@color/white"
             android:fontFamily="@font/montserrat_bold"
             android:text="Invest today\nfor better\ntomorrow."/>
 
@@ -31,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_22ssp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/montserrat_bold"
             android:text="Easy.\nFast\nSecure."/>

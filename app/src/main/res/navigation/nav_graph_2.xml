@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.finkart.views.HomeFragment"
+        android:name="com.investment.finkart.views.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,12 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.finkart.views.AccountFragment"
+        android:name="com.investment.finkart.views.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" >
-        <action
-            android:id="@+id/action_accountFragment_to_nomineeDetailsFragment"
-            app:destination="@id/nomineeDetailsFragment" />
         <action
             android:id="@+id/action_accountFragment_to_kycDetailsFragment"
             app:destination="@id/kycDetailsFragment" />
@@ -34,40 +31,52 @@
         <action
             android:id="@+id/action_accountFragment_to_walletFragment"
             app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_policiesFragment"
+            app:destination="@id/policiesFragment" />
     </fragment>
     <fragment
         android:id="@+id/transactionFragment"
-        android:name="com.finkart.views.TransactionFragment"
+        android:name="com.investment.finkart.views.TransactionFragment"
         android:label="fragment_transaction"
         tools:layout="@layout/fragment_transaction" />
     <fragment
         android:id="@+id/investmentFragment"
-        android:name="com.finkart.views.InvestmentFragment"
+        android:name="com.investment.finkart.views.InvestmentFragment"
         android:label="fragment_investment"
-        tools:layout="@layout/fragment_investment" />
+        tools:layout="@layout/fragment_investment" >
+        <action
+            android:id="@+id/action_investmentFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bankDetailsFragment"
-        android:name="com.finkart.views.BankDetailsFragment"
+        android:name="com.investment.finkart.views.BankDetailsFragment"
         android:label="fragment_bank_details"
         tools:layout="@layout/fragment_bank_details" />
     <fragment
         android:id="@+id/kycDetailsFragment"
-        android:name="com.finkart.views.KycDetailsFragment"
+        android:name="com.investment.finkart.views.KycDetailsFragment"
         android:label="fragment_kyc_details"
         tools:layout="@layout/fragment_kyc_details" />
     <fragment
         android:id="@+id/myInvestmentFragment"
-        android:name="com.finkart.views.MyInvestmentFragment"
+        android:name="com.investment.finkart.views.MyInvestmentFragment"
         android:label="fragment_my_investment"
         tools:layout="@layout/fragment_my_investment" />
     <fragment
-        android:id="@+id/nomineeDetailsFragment"
-        android:name="com.finkart.views.NomineeDetailsFragment"
-        android:label="fragment_nominee_details"
-        tools:layout="@layout/fragment_nominee_details" />
-    <fragment
         android:id="@+id/walletFragment"
-        android:name="com.finkart.views.WalletFragment"
+        android:name="com.investment.finkart.views.WalletFragment"
         android:label="fragment_wallet"
         tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.investment.finkart.views.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/policiesFragment"
+        android:name="com.investment.finkart.views.PoliciesFragment"
+        android:label="fragment_policies"
+        tools:layout="@layout/fragment_policies" />
 </navigation>

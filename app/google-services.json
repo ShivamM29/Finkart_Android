@@ -14,6 +14,43 @@
       },
       "oauth_client": [
         {
+          "client_id": "434274078606-dsog1vm6bv7dbeubb1epg95ld607qcpk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finkart",
+            "certificate_hash": "c5a6141a3c14f691c6e1c31941b277da97758e8c"
+          }
+        },
+        {
+          "client_id": "434274078606-frlmlbkb8vhm1mibae4jgmqb4bl9l1f1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt7TPjxmOMAZYrd3nqwkf7DGedwSpGWUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434274078606-frlmlbkb8vhm1mibae4jgmqb4bl9l1f1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434274078606:android:a2f57e39e39aa03e201edf",
+        "android_client_info": {
+          "package_name": "com.investment.finkart"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "434274078606-frlmlbkb8vhm1mibae4jgmqb4bl9l1f1.apps.googleusercontent.com",
           "client_type": 3
         }

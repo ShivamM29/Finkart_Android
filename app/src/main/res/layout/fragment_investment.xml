@@ -142,8 +142,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/batch_item_background"
-                        android:padding="@dimen/margin_small"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:paddingStart="@dimen/padding_normal"
+                        android:paddingEnd="@dimen/padding_normal"
                         android:text="..."
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_10ssp"
                         app:fontFamily="@font/montserrat_bold" />
 
@@ -159,6 +163,7 @@
                         android:background="@drawable/batch_item_background"
                         android:padding="@dimen/margin_small"
                         android:text="..."
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_10ssp"
                         app:fontFamily="@font/montserrat_bold" />
 
@@ -174,6 +179,7 @@
                         android:background="@drawable/batch_item_background"
                         android:padding="@dimen/margin_small"
                         android:text="..."
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_10ssp"
                         app:fontFamily="@font/montserrat_bold" />
 
