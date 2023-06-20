@@ -2,6 +2,8 @@ package com.investment.finkart.views
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -71,7 +73,7 @@ class PaymentFragment : Fragment() {
             alertDialog.dismiss()
             alertDialog = null
 
-//            launchUpiPayment()
+            launchUpiPayment()
         }
 
     }
@@ -103,20 +105,20 @@ class PaymentFragment : Fragment() {
     }
 
     private fun launchUpiPayment() {
-//        try {
-//            val amount = "am=$totalAmount"
-//            val UPI = "upi://pay?pa=merchant1259991.augp@aubank&tn=&$amount&mam=&orgid=159765&pn=merchant1103141&mode=02&purpose=00&mc=0000&tr=&url=&category=&ver=01&cu=INR&mid=&msid=&mtid=&enTips=&mg=OFFLINE&qrMedium=04&invoiceNo=&invoiceDate=&QRts=2022-06-05 03:24:28&QRexpire=&Split=&PinCode=&Tier=&txntype=&Consent=&mn=&type=&validitystart=&validityend=&Amrule=&Recur=&Recurvalue=&RecureType=&Rev=&Share=&Block=&Umn=&Skip=&sign=AKadyYMqlMJRHDp6CBlgGPYvLq3mf9CP0uYqCpmJ5X3m8hTRjJgMW076zylZ+eIkdsQ+nSaLEp2Xs6v6N/LSso9YADPpvXIIXvdUukF5YzsKBGt4pwjmLgYSUtedXEEZlJEyRYKheD2rHTJNWgLR0hg6VKLO8tdUgFnFOzy0q66JdZFy"
-//            val intent = Intent()
-//            intent.action = Intent.ACTION_VIEW
-//            intent.data = Uri.parse(UPI)
-//            val chooser = Intent.createChooser(intent, "Pay with...")
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-//                upiActivityResult?.launch(chooser)
-//            }
-//        } catch (e: Exception) {
-//            Toast.makeText(context, Constants.ERROR_MESSAGE_SOMETHING_WENT_WRONG, Toast.LENGTH_SHORT).show()
-//            e.printStackTrace()
-//        }
+        try {
+            val amount = "am=$totalAmount"
+            val UPI = "upi://pay?pa=merchant1397040.augp@aubank&tn=&$amount&mam=&orgid=159765&pn=merchant1397040&mode=02&purpose=00&mc=0000&tr=&url=&category=&ver=01&cu=INR&mid=&msid=&mtid=&enTips=&mg=OFFLINE&qrMedium=04&invoiceNo=&invoiceDate=&QRts=2022-09-08 07:33:44&QRexpire=&Split=&PinCode=&Tier=&txntype=&Consent=&mn=&type=&validitystart=&validityend=&Amrule=&Recur=&Recurvalue=&RecureType=&Rev=&Share=&Block=&Umn=&Skip=&sign=AewkWHAGp2ocfA/DIgw8X8fQeQ/xucOetn0TW/33Vjwt8N1PgqC9q5Xexepk/ZQ22+4wSFvREbcPSOGQVEgT0zrjAepvowqq2odK+dGtDQHL0h7dU9bVicHKA0XIGvjKBYYZdzUWV7ICbCeQBc9/3jdouCPoTtEV9Hv7a+2JcdkKS7YQ"
+            val intent = Intent()
+            intent.action = Intent.ACTION_VIEW
+            intent.data = Uri.parse(UPI)
+            val chooser = Intent.createChooser(intent, "Pay with...")
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                upiActivityResult?.launch(chooser)
+            }
+        } catch (e: Exception) {
+            Toast.makeText(context, Constants.ERROR_MESSAGE_SOMETHING_WENT_WRONG, Toast.LENGTH_SHORT).show()
+            e.printStackTrace()
+        }
     }
 
     private fun createInvestment(){

@@ -118,7 +118,7 @@ class InvestmentFragment : Fragment() {
             bundle.putString(Constants.INTENT_PLAN, planName)
             bundle.putString(Constants.INTENT_AMOUNT, amount)
             bundle.putString(Constants.INTENT_INTEREST, percentAnnual.toString())
-//            navController.navigate(R.id.action_investmentFragment_to_paymentFragment, bundle, navOptions)
+            navController.navigate(R.id.action_investmentFragment_to_paymentFragment, bundle, navOptions)
         }
     }
 

@@ -8,6 +8,8 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.google.android.material.button.MaterialButton
 import com.investment.finkart.R
 import javax.inject.Inject
@@ -23,7 +25,7 @@ class OhSnapErrorAlert @Inject constructor() {
         return ohSnapErrorAlert
     }
 
-    fun showAlert(context: Context, notice: String?, image: Int) {
+    fun showAlert(context: Context, navController: NavController, notice: String?, image: Int) {
         mDialog = Dialog(context)
 //        context.setTheme(R.style.AlertStyle)
         mDialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -38,7 +40,7 @@ class OhSnapErrorAlert @Inject constructor() {
         tvNotice.text = notice
         btnDismiss.setOnClickListener {
             hideAlert()
-            (context as Activity).finish()
+            navController.popBackStack()
         }
         mDialog?.show()
     }

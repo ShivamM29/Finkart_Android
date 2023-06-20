@@ -9,6 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import com.investment.finkart.MainActivity
 import com.investment.finkart.databinding.FragmentOnBoardBinding
 import com.investment.finkart.config.AuthConfig
 import com.investment.finkart.models.LoginData
@@ -25,6 +28,7 @@ class OnBoardFragment : Fragment() {
     private lateinit var finkartLoading: FinkartLoading
     private lateinit var authConfig: AuthConfig
     private lateinit var retrofitBuilder: RetrofitBuilder
+    private lateinit var navController: NavController
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -38,6 +42,7 @@ class OnBoardFragment : Fragment() {
         finkartLoading = FinkartLoading()
         authConfig = AuthConfig(requireContext())
         retrofitBuilder = RetrofitBuilder()
+        navController = findNavController()
 
         binding.btnAdd.setOnClickListener {
             if (validateInput()){
@@ -123,6 +128,9 @@ class OnBoardFragment : Fragment() {
                             Constants.RESPONSE_BAD_REQUEST -> {
                                 Toast.makeText(context, "Invalid input", Toast.LENGTH_SHORT).show()
                             }
+                            else -> {
+                                Toast.makeText(context, data?.message, Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }else{
                         Toast.makeText(context, response.message(), Toast.LENGTH_SHORT).show()
@@ -143,7 +151,7 @@ class OnBoardFragment : Fragment() {
     }
 
     private fun moveToMain() {
-        val intent = Intent(context, com.investment.finkart.MainActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
         startActivity(intent)
 
         (context as Activity).finish()

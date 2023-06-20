@@ -88,17 +88,22 @@ class LoginFragment : Fragment() {
                 loginBottomSheetBinding.viewFlipper.showNext()
                 firebaseCallback()
 
+                finkartLoading.showProgress(requireContext())
                 getOtp()
             }
         }
 
         loginBottomSheetBinding.btnVerify.setOnClickListener{
-            if (isValidOTPInput()){
-                // add firebase verification
-                finkartLoading.showProgress(requireContext())
-                val code = loginBottomSheetBinding.etOTP.text.toString()
-                val credential = PhoneAuthProvider.getCredential(mVerificationId!!, code)
-                signInWithPhoneAuthCredential(credential)
+            try {
+                if (isValidOTPInput()){
+                    // add firebase verification
+                    finkartLoading.showProgress(requireContext())
+                    val code = loginBottomSheetBinding.etOTP.text.toString()
+                    val credential = PhoneAuthProvider.getCredential(mVerificationId!!, code)
+                    signInWithPhoneAuthCredential(credential)
+                }
+            }catch (e: Exception){
+                e.printStackTrace()
             }
         }
 
@@ -152,22 +157,25 @@ class LoginFragment : Fragment() {
 
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        firebaseAuth.signInWithCredential(credential)
-            .addOnCompleteListener(requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    register()
-                } else {
-                    if (task.exception is FirebaseAuthInvalidCredentialsException) {
-                        Toast.makeText(
-                            requireContext(),
-                            "Looks mobile number is  not correct.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        Log.i("Login", "signInWithPhoneAuthCredential: ${task.exception?.localizedMessage}")
-                        finkartLoading.hideProgress()
+        try {
+            firebaseAuth.signInWithCredential(credential)
+                .addOnCompleteListener(requireActivity()) { task ->
+                    if (task.isSuccessful) {
+                        register()
+                    } else {
+                        if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                            Toast.makeText(
+                                requireContext(),
+                                "Looks mobile number is  not correct.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            finkartLoading.hideProgress()
+                        }
                     }
                 }
-            }
+        }catch (e: Exception){
+            e.printStackTrace()
+        }
     }
 
 

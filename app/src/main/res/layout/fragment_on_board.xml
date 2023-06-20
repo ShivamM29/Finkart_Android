@@ -14,13 +14,6 @@
         android:gravity="center_vertical"
         android:layout_margin="@dimen/margin_normal">
 
-        <ImageButton
-            android:layout_width="@dimen/_36sdp"
-            android:layout_height="@dimen/_36sdp"
-            android:src="@drawable/back_arrow"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            app:tint="@color/white" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

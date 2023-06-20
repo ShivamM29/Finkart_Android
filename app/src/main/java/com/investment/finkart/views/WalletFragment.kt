@@ -121,6 +121,6 @@ class WalletFragment : Fragment() {
     }
 
     private fun launchErrorDialog(image: Int, message: String){
-        ohSnapErrorAlert.showAlert(requireContext(),message, image)
+        ohSnapErrorAlert.showAlert(requireContext(), navController, message, image)
     }
 }

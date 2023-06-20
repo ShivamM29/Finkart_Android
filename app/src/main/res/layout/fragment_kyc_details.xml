@@ -466,7 +466,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/padding_tiny"
+                    android:padding="@dimen/padding_small"
                     android:layout_margin="@dimen/margin_small"
                     android:background="@drawable/item_boarder_background"
                     android:orientation="vertical">
@@ -578,7 +578,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/padding_tiny"
+                    android:padding="@dimen/padding_small"
                     android:layout_margin="@dimen/margin_small"
                     android:layout_marginTop="@dimen/margin_normal"
                     android:background="@drawable/item_boarder_background"

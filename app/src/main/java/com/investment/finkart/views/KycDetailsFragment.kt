@@ -268,9 +268,13 @@ class KycDetailsFragment : Fragment() {
         binding.tvPanNo.text = kycItems.kyc?.panNumber
         binding.tvOccupation.text = kycItems.kyc?.occupation
 
-        binding.tvNomineeName.text = kycDetails["nomineeName"].toString()
-        binding.tvNomineeAadhaarNumber.text = kycDetails["nomineeAadhaarNo"].toString()
-        binding.tvRelation.text = kycDetails["nomineeRelation"].toString()
+//        binding.tvNomineeName.text = kycDetails["nomineeName"].toString()
+//        binding.tvNomineeAadhaarNumber.text = kycDetails["nomineeAadhaarNo"].toString()
+//        binding.tvRelation.text = kycDetails["nomineeRelation"].toString()
+
+        binding.tvNomineeName.text = kycItems.nominee?.nomineeName
+        binding.tvNomineeAadhaarNumber.text =kycItems.nominee?.nomineeAadhaarNo
+        binding.tvRelation.text = kycItems.nominee?.nomineeRelation
     }
 
     private fun initImageViews(){
@@ -400,7 +404,7 @@ class KycDetailsFragment : Fragment() {
         val occupation = binding.etWhatYouDo.text.toString()
         val nomineeName = binding.etNomineeName.text.toString()
         val nomineeRelation = binding.etNomineeRelation.text.toString()
-        val nomineeAadhaarNo = binding.etNomineeRelation.text.toString()
+        val nomineeAadhaarNo = binding.etNomineeAadhaar.text.toString()
 
         kycDetails["name"] = name
         kycDetails["aadhaarNumber"] = aadhaarCardNumber
