@@ -26,6 +26,7 @@ import com.investment.finkart.models.GenericResponse
 import com.investment.finkart.models.KycData
 import com.investment.finkart.models.KycItems
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import com.investment.finkart.utils.FinkartLoading
 import retrofit2.Call
@@ -50,6 +51,9 @@ class KycDetailsFragment : Fragment() {
     private lateinit var storageRef: StorageReference
     private lateinit var navController: NavController
 
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
         binding = FragmentKycDetailsBinding.inflate(inflater, container, false)
@@ -65,6 +69,7 @@ class KycDetailsFragment : Fragment() {
         storageRef = FirebaseStorage.getInstance().reference.child("Kyc").child(userId)
         finkartLoading = FinkartLoading()
         navController = findNavController()
+        commonLogout = CommonLogout(requireContext())
 
         val name = authConfig.getName()
         val occupation = authConfig.getOccupation()
@@ -152,6 +157,10 @@ class KycDetailsFragment : Fragment() {
                                 Constants.RESPONSE_BAD_REQUEST -> {
                                     binding.viewFlipper.visibility = View.VISIBLE
 //                                    binding.frameButton.visibility = View.VISIBLE
+                                }
+
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
 
                                 else -> {
@@ -441,6 +450,10 @@ class KycDetailsFragment : Fragment() {
                                     }else {
                                         Toast.makeText(context, "Invalid input", Toast.LENGTH_SHORT).show()
                                     }
+                                }
+
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
 
                                 else -> {

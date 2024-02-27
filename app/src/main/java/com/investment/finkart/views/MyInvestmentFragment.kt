@@ -14,6 +14,7 @@ import com.investment.finkart.config.AuthConfig
 import com.investment.finkart.models.InvestmentData
 import com.investment.finkart.models.InvestmentItems
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -24,6 +25,7 @@ class MyInvestmentFragment : Fragment() {
     private lateinit var authConfig: AuthConfig
     private lateinit var retrofitBuilder: RetrofitBuilder
     private lateinit var navController: NavController
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -37,6 +39,7 @@ class MyInvestmentFragment : Fragment() {
         authConfig = AuthConfig(requireContext())
         retrofitBuilder = RetrofitBuilder()
         navController = findNavController()
+        commonLogout = CommonLogout(requireContext())
 
         getInvestment()
 
@@ -64,6 +67,9 @@ class MyInvestmentFragment : Fragment() {
                                         binding.rvInvestments.visibility = View.GONE
                                         binding.lvInfo.visibility = View.VISIBLE
                                     }
+                                }
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
                                 else -> {
                                     binding.rvInvestments.visibility = View.GONE

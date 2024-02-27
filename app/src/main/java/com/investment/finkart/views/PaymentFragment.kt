@@ -23,6 +23,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.investment.finkart.config.AuthConfig
 import com.investment.finkart.models.GenericResponse
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,6 +35,7 @@ import java.util.Calendar
 class PaymentFragment : Fragment() {
     private lateinit var binding: FragmentPaymentBinding
     private lateinit var authConfig: AuthConfig
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
 
     private var totalAmount: Float = 0f
     private lateinit var retrofitBuilder: RetrofitBuilder
@@ -53,6 +55,7 @@ class PaymentFragment : Fragment() {
         navController = findNavController()
         retrofitBuilder = RetrofitBuilder()
         authConfig = AuthConfig(requireContext())
+        commonLogout = CommonLogout(requireContext())
 
         totalAmount = arguments?.getString(Constants.INTENT_AMOUNT).toString().toFloat()
 
@@ -149,6 +152,10 @@ class PaymentFragment : Fragment() {
                                 // finish the fragment
                                 navController.popBackStack()
                             }
+
+                            Constants.RESPONSE_FORBIDDEN -> {
+                                commonLogout.logout(authConfig)
+                            }
                         }
                     }else {
                         Toast.makeText(context, Constants.ERROR_MESSAGE_SOMETHING_WENT_WRONG, Toast.LENGTH_SHORT).show()
@@ -216,7 +223,6 @@ class PaymentFragment : Fragment() {
         bottomSheetBinding.btnDone.setOnClickListener {
             bottomSheetDialog.dismiss()
             navController.popBackStack()
-//            onBackPressedDispatcher.onBackPressed()
         }
     }
 }

@@ -13,6 +13,7 @@ import com.investment.finkart.config.AuthConfig
 import com.investment.finkart.models.BalanceData
 import com.investment.finkart.models.BalanceItems
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import com.investment.finkart.utils.OhSnapErrorAlert
 import retrofit2.Call
@@ -26,6 +27,7 @@ class WalletFragment : Fragment() {
     private lateinit var retrofitBuilder: RetrofitBuilder
     private lateinit var ohSnapErrorAlert: OhSnapErrorAlert
     private lateinit var navController: NavController
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -40,6 +42,7 @@ class WalletFragment : Fragment() {
         authConfig = AuthConfig(requireContext())
         retrofitBuilder = RetrofitBuilder()
         ohSnapErrorAlert = OhSnapErrorAlert()
+        commonLogout = CommonLogout(requireContext())
 
         binding.ibBack.setOnClickListener {
             navController.popBackStack()
@@ -64,6 +67,10 @@ class WalletFragment : Fragment() {
                                     binding.tvProfit.visibility = View.VISIBLE
                                     binding.animationView.setAnimation(R.raw.wallet)
                                     setData(items!!)
+                                }
+
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
 
                                 else -> {

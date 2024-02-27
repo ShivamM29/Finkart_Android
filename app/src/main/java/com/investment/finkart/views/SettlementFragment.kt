@@ -12,6 +12,7 @@ import com.investment.finkart.config.AuthConfig
 import com.investment.finkart.models.SettlementData
 import com.investment.finkart.models.SettlementItems
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,6 +22,7 @@ class SettlementFragment : Fragment() {
     private lateinit var binding: FragmentSettlementBinding
     private lateinit var retrofitBuilder: RetrofitBuilder
     private lateinit var authConfig: AuthConfig
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
@@ -33,6 +35,7 @@ class SettlementFragment : Fragment() {
     private fun initView() {
         retrofitBuilder = RetrofitBuilder()
         authConfig = AuthConfig(requireContext())
+        commonLogout = CommonLogout(requireContext())
 
         try {
             getTransaction()
@@ -59,6 +62,9 @@ class SettlementFragment : Fragment() {
                                 // no data found
                                 binding.rvSettlements.visibility = View.GONE
                                 binding.lvInfo.visibility = View.VISIBLE
+                            }
+                            Constants.RESPONSE_FORBIDDEN -> {
+                                commonLogout.logout(authConfig)
                             }
                         }
                     }else{

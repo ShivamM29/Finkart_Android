@@ -17,6 +17,7 @@ import com.investment.finkart.models.AddBankData
 import com.investment.finkart.models.BankData
 import com.investment.finkart.models.BankItems
 import com.investment.finkart.network.RetrofitBuilder
+import com.investment.finkart.utils.CommonLogout
 import com.investment.finkart.utils.Constants
 import com.investment.finkart.utils.FinkartLoading
 import retrofit2.Call
@@ -33,6 +34,9 @@ class BankDetailsFragment : Fragment() {
     private lateinit var finkartLoading: FinkartLoading
     private lateinit var navController: NavController
 
+    private lateinit var commonLogout: CommonLogout                 // this is the class called when the token has expired and user should redirect to login screen
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = FragmentBankDetailsBinding.inflate(inflater, container, false)
@@ -45,6 +49,7 @@ class BankDetailsFragment : Fragment() {
         authConfig = AuthConfig(requireContext())
         retrofitBuilder = RetrofitBuilder()
         finkartLoading = FinkartLoading()
+        commonLogout = CommonLogout(requireContext())
 
         getBank()
 
@@ -102,6 +107,10 @@ class BankDetailsFragment : Fragment() {
                                     } else {
                                         onError(Constants.ERROR_MESSAGE_SOMETHING_WENT_WRONG, "get")
                                     }
+                                }
+
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
                             }
                         }
@@ -205,6 +214,10 @@ class BankDetailsFragment : Fragment() {
                                 }else {
                                     Toast.makeText(context, "Invalid input", Toast.LENGTH_SHORT).show()
                                 }
+                            }
+
+                            Constants.RESPONSE_FORBIDDEN -> {
+                                commonLogout.logout(authConfig)
                             }
                         }
                     }else{
@@ -343,6 +356,10 @@ class BankDetailsFragment : Fragment() {
 
                                 Constants.RESPONSE_BAD_REQUEST -> {
                                     Toast.makeText(requireContext(), "Invalid Input", Toast.LENGTH_SHORT).show()
+                                }
+
+                                Constants.RESPONSE_FORBIDDEN -> {
+                                    commonLogout.logout(authConfig)
                                 }
 
                                 else -> {

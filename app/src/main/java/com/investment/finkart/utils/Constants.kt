@@ -2,7 +2,7 @@ package com.investment.finkart.utils
 
 class Constants {
     companion object{
-        const val BASE_URL = "http://139.59.25.54:7000/v1/"
+        const val BASE_URL = "https://app.finkart.live/v1/"
         const val TOKEN_PREFIX_BEARER = "Bearer "
 
         const val RESPONSE_SUCCESS = 200

@@ -207,8 +207,6 @@ class LoginFragment : Fragment() {
             registerDetails["userId"] = firebaseAuth.currentUser?.uid!!
             registerDetails["phone"] = phone
 
-            Log.i("Login", "register: userId ${firebaseAuth.currentUser?.uid.toString()}")
-
             val call = retrofitBuilder.getFinkartService().register(registerDetails)
             call.enqueue(object : Callback<LoginData>{
                 override fun onResponse(call: Call<LoginData>, response: Response<LoginData>) {
