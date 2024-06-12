@@ -30,6 +30,6 @@
             android:layout_marginTop="@dimen/margin_tiny"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/black"
-            android:text="helpdesk@finkartinvestment.in"/>
+            android:text="helpdesk@finnowinvestment.com"/>
     </LinearLayout>
 </FrameLayout>

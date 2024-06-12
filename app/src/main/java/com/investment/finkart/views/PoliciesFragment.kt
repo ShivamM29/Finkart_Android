@@ -35,10 +35,10 @@ class PoliciesFragment : Fragment() {
         Log.i("Policies", "initView: From $from")
         if (from == Constants.INTENT_FROM_PRIVACY){
             binding.tvTitle.text = "Privacy Policy"
-            url = "https://finkartinvestment.in/privacy-policy/"
+            url = "https://finnowinvestment.com/privacy-policy/"
         }else if (from == Constants.INTENT_FROM_TERMS){
             binding.tvTitle.text = "Terms Of Service"
-            url = "https://finkartinvestment.in/terms-of-use/"
+            url = "https://finnowinvestment.com/terms-and-conditions/"
         }
         startWebView(url)
         binding.ibBack.setOnClickListener {

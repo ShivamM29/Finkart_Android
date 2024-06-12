@@ -289,19 +289,19 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/_11ssp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_tiny"
-                        android:text="2. The earned monthly ROI will be automatically credited to the bank account of the user on the first Monday of every month. "
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/_11ssp" />
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/margin_tiny"-->
+<!--                        android:text="2. The earned monthly ROI will be automatically credited to the bank account of the user on the first Monday of every month. "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/_11ssp" />-->
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_tiny"
-                        android:text="3. For any information regarding the investment terms the users can refer to the agreement sent to their registered emails."
+                        android:text="2. For any information regarding the investment terms the users can refer to the agreement sent to their registered emails."
                         android:textColor="@color/black"
                         android:textSize="@dimen/_11ssp" />
                 </LinearLayout>
